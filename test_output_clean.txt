@@ -1,0 +1,12 @@
+
+
+  Secure Vault System
+    ✔ Should accept deposits
+    ✔ Should allow withdrawal with valid authorization (41ms)
+    ✔ Should prevent replay attacks (45ms)
+    ✔ Should fail with invalid signer
+    ✔ Should fail with manipulated parameters
+
+
+  5 passing (1s)
+

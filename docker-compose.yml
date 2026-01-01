@@ -1,0 +1,22 @@
+services:
+  blockchain:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      - SERVICE_ROLE=blockchain
+    ports:
+      - "8545:8545"
+
+  deployer:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      - SERVICE_ROLE=deployer
+      - BLOCKCHAIN_HOST=blockchain
+      - RPC_URL=http://blockchain:8545
+    depends_on:
+      - blockchain
+    # Map logs to see output clearly
+    command: ["sh", "./docker/entrypoint.sh"]

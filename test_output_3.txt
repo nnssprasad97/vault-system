@@ -1,0 +1,25 @@
+
+
+  Secure Vault System
+    ✔ Should accept deposits
+    ✔ Should allow withdrawal with valid authorization
+    ✔ Should prevent replay attacks (42ms)
+    1) Should fail with invalid signer
+    2) Should fail with manipulated parameters
+
+
+  3 passing (1s)
+  2 failing
+
+  1) Secure Vault System
+       Should fail with invalid signer:
+     AssertionError: Expected transaction to be reverted with reason 'Authorization failed', but it reverted with reason 'Insufficient balance'
+      at Context.<anonymous> (file:///C:/Users/nnssp/.gemini/antigravity/playground/plasma-eclipse/test/system.spec.js:148:9)
+
+  2) Secure Vault System
+       Should fail with manipulated parameters:
+     AssertionError: Expected transaction to be reverted with reason 'Authorization failed', but it reverted with reason 'Insufficient balance'
+      at Context.<anonymous> (file:///C:/Users/nnssp/.gemini/antigravity/playground/plasma-eclipse/test/system.spec.js:168:9)
+
+
+
