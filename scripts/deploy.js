@@ -1,3 +1,9 @@
+/**
+ * Vault System Deployment Script
+ * Deploys AuthorizationManager and SecureVault contracts
+ * Usage: npx hardhat run scripts/deploy.js --network [network]
+ */
+
 import hre from "hardhat";
 
 async function main() {
