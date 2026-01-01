@@ -1,3 +1,8 @@
+# Vault System Docker Compose Configuration
+# This orchestrates the local blockchain and contract deployment environment
+# Services: blockchain node (Hardhat) and deployer service
+
+
 services:
   blockchain:
     build:
