@@ -1,3 +1,10 @@
+/**
+ * Hardhat Configuration for Vault System
+ * Configures solidity version, networks, and compilation settings
+ * Networks: hardhat (local dev), localhost (docker-compose)
+ */
+
+
 import "@nomicfoundation/hardhat-toolbox";
 
 const RPC_URL = process.env.RPC_URL || "http://127.0.0.1:8545";
