@@ -1,3 +1,9 @@
+#!/bin/bash
+# Vault System Docker Entrypoint Script
+# Orchestrates blockchain node and contract deployment
+# Services: blockchain node | contract deployer
+
+
 #!/bin/sh
 
 # If we are the 'blockchain' service, we just run the node
