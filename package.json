@@ -1,7 +1,7 @@
 {
   "name": "plasma-eclipse",
   "version": "1.0.0",
-  "description": "",
+"description": "Secure vault system with EIP-712 authorization and replay protection",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
