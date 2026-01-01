@@ -8,6 +8,20 @@ import "./AuthorizationManager.sol";
  * @title SecureVault
  * @notice Holds funds and allows withdrawals only with valid authorization.
  */
+
+ /**
+  * @dev Enhanced documentation for SecureVault contract
+  * This contract manages fund custody and withdrawal execution
+  * with cryptographic authorization validation.
+  * 
+  * Security Architecture:
+  * - Immutable authorization manager reference
+  * - Reentrancy guard protection
+  * - Receive function for deposit acceptance
+  * - Authorization-gated withdrawal mechanism
+  * - Check-effects-interactions pattern
+  */
+
 contract SecureVault is ReentrancyGuard {
     AuthorizationManager public immutable authManager;
 
