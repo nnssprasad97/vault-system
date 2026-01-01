@@ -1,3 +1,8 @@
+# Vault System Dockerfile
+# Builds container for running vault system with Hardhat
+# Stages: base image -> dependencies -> compilation -> deployment
+
+
 FROM node:20-alpine
 
 WORKDIR /app
