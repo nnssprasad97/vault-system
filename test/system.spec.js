@@ -1,3 +1,10 @@
+/**
+ * Vault System Integration Tests
+ * Comprehensive test suite validating authorization, withdrawals, and security mechanisms
+ * Test coverage includes: deposits, authorizations, replay protection, signature verification
+ */
+
+
 import { expect } from "chai";
 import hre from "hardhat";
 const { ethers } = hre;
