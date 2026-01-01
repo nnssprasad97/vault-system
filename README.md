@@ -82,3 +82,25 @@ npx hardhat test tests/system.spec.js
 -   **Signer Security**: The security of the system depends entirely on the private key of the authorized `signer`. If compromised, the attacker can generate valid withdrawal signatures.
 -   **Nonce Management**: The off-chain system must manage unique nonces. Collisions will result in failed legitimate withdrawals.
 -   **Gas Costs**: On-chain verification and state updates (writing to `usedNonces`) incur gas usage for every withdrawal.
+
+
+## Implementation Details
+
+### EIP-712 Signature Verification
+The system uses EIP-712 typed data for authorization signatures. This ensures that users see exactly what they're authorizing before signing, preventing common security issues.
+
+### Nonce-Based Replay Prevention
+Each authorization is bound to a unique nonce. Once a nonce is used, the AuthorizationManager marks it as consumed, preventing any future use of the same authorization.
+
+### State Management Best Practices
+The vault implements the check-effects-interactions pattern:
+1. Check authorization validity
+2. Update internal state (mark nonce as used)
+3. Transfer funds to recipient
+
+### Testing Coverage
+Comprehensive test suite covers:
+- Successful deposits and withdrawals
+- Replay attack prevention
+- Invalid signer rejection
+- Parameter manipulation protection
