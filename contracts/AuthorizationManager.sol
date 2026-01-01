@@ -9,6 +9,20 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @title AuthorizationManager
  * @notice Validates off-chain permissions for vault withdrawals.
  */
+
+ /**
+  * @dev Enhanced documentation for AuthorizationManager contract
+  * This contract manages the authorization and verification of withdrawal
+  * permissions using EIP-712 typed data signatures.
+  * 
+  * Key Features:
+  * - EIP-712 compliant signature verification
+  * - Nonce-based replay attack prevention
+  * - Owner-controlled signer management
+  * - Event-based authorization tracking
+  * - Check-effects-interactions pattern implementation
+  */
+
 contract AuthorizationManager is EIP712, Ownable {
     // Defines the type hash for the WithdrawalAuthorization struct
     // keccak256("WithdrawalAuthorization(address vault,address recipient,uint256 amount,bytes32 nonce,uint256 deadline)")
